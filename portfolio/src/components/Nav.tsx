@@ -22,29 +22,24 @@ const itemMotion = {
 
 const Nav = () => {
   const [toggled, setToggled] = useState(false);
-  const matches = useMediaQuery("(max-width: 768px)");
+  const matches = useMediaQuery("(max-width: 900px)");
   return (
-    <nav className=" relative mx-8 mb-24 flex justify-between items-center pt-12 pb-6 font-medium md:mx-16 lg:mx-32">
-      <svg
-        className=" absolute bottom-0 left-1/2 -translate-x-1/2"
-        width={250}
-        height={4}
-        viewBox="0 0 250 4"
-        fill="none"
-        xmlns="https://www.w3.org/2000/svg"
-      >
-        <path d="M2 2L428 2" stroke="#282828" /* strokeLinecap=" round" */ />
-      </svg>
+    <nav className=" bg-[#001E6C] text-white sticky  px-20 mb-24 flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
       <div>
-        <img src="/favicon.png" alt="" width={70} />
+        <img
+          className="filter brightness-0 invert"
+          src="/favicon.png"
+          alt=""
+          width={70}
+        />
       </div>
       {!matches && (
         <div className=" flex gap-12">
           <a href="">About</a>
-          <a href="">Expirience</a>
-          <a href="">Skills</a>
-          <a href="">Certifications</a>
           <a href="">Projects</a>
+          <a href="">Skills</a>
+          <a href="">Contact</a>
+          <a href="">Certifications</a>
         </div>
       )}
       {matches && (
@@ -54,11 +49,11 @@ const Nav = () => {
         >
           <motion.span
             animate={{ rotateZ: toggled ? 45 : 0, y: toggled ? 8 : 0 }}
-            className=" block h-1 w-8 rounded bg-black"
+            className=" block h-1 w-8 rounded bg-white"
           ></motion.span>
           <motion.span
             animate={{ width: toggled ? 0 : 26 }}
-            className=" block h-1 w-6 rounded bg-black"
+            className=" block h-1 w-6 rounded bg-white"
           ></motion.span>
           <motion.span
             animate={{
@@ -66,7 +61,7 @@ const Nav = () => {
               y: toggled ? -8 : 0,
               width: toggled ? 30 : 18,
             }}
-            className=" block h-1 w-4 rounded bg-black"
+            className=" block h-1 w-4 rounded bg-white"
           ></motion.span>
         </div>
       )}
@@ -74,7 +69,7 @@ const Nav = () => {
         <motion.div
           animate={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
-          className=" fixed flex bg-white bottom-0 left-0 w-full h-screen items-center justify-center"
+          className=" fixed flex bg-[#001E6C] bottom-0 left-0 w-full h-screen items-center justify-center"
         >
           <motion.div
             variants={navMotion}
@@ -86,16 +81,16 @@ const Nav = () => {
               About
             </motion.a>
             <motion.a variants={itemMotion} href="">
-              Expirience
+              Projects
             </motion.a>
             <motion.a variants={itemMotion} href="">
               Skills
             </motion.a>
             <motion.a variants={itemMotion} href="">
-              Certifications
+              Contact
             </motion.a>
             <motion.a variants={itemMotion} href="">
-              Projects
+              Certifications
             </motion.a>
           </motion.div>
         </motion.div>
