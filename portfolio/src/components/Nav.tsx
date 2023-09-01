@@ -34,12 +34,37 @@ const Nav = () => {
         />
       </div>
       {!matches && (
-        <div className=" flex gap-12">
-          <a href="">About</a>
-          <a href="">Projects</a>
-          <a href="">Skills</a>
-          <a href="">Contact</a>
-          <a href="">Certifications</a>
+        <div className=" flex ">
+          <a
+            className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300 "
+            href=""
+          >
+            About
+          </a>
+          <a
+            className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
+            href=""
+          >
+            Projects
+          </a>
+          <a
+            className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
+            href=""
+          >
+            Skills
+          </a>
+          <a
+            className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
+            href=""
+          >
+            Contact
+          </a>
+          <a
+            className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
+            href=""
+          >
+            Certifications
+          </a>
         </div>
       )}
       {matches && (
