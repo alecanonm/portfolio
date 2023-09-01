@@ -11,12 +11,16 @@ import Nav from '../components/Nav'
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-    <meta title={title}  />
+    <meta title={title}  />	
+
 	</head>
 	<body>
-    <main>
-      <Nav client:visible/>
+			<header>
+			<Nav client:visible/>
+			</header>
+    <main >
       <slot/>
     </main>
+		<footer></footer>
 	</body>
 </html>

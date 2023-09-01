@@ -25,16 +25,18 @@ const Nav = () => {
   const matches = useMediaQuery("(max-width: 900px)");
   return (
     <nav className=" bg-[#001E6C] text-white sticky  px-20 mb-24 flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
-      <div>
-        <img
-          className="filter brightness-0 invert"
-          src="/favicon.png"
-          alt=""
-          width={70}
-        />
-      </div>
+      <figure>
+        <a href="/">
+          <img
+            className="filter brightness-0 invert"
+            src="/favicon.png"
+            alt=""
+            width={70}
+          />
+        </a>
+      </figure>
       {!matches && (
-        <div className=" flex ">
+        <section className=" flex ">
           <a
             className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300 "
             href=""
@@ -55,7 +57,7 @@ const Nav = () => {
           </a>
           <a
             className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
-            href=""
+            href="/contact"
           >
             Contact
           </a>
@@ -65,10 +67,10 @@ const Nav = () => {
           >
             Certifications
           </a>
-        </div>
+        </section>
       )}
       {matches && (
-        <div
+        <section
           onClick={() => setToggled((prevToggled) => !prevToggled)}
           className=" space-y-1 cursor-pointer z-50"
         >
@@ -88,15 +90,15 @@ const Nav = () => {
             }}
             className=" block h-1 w-4 rounded bg-white"
           ></motion.span>
-        </div>
+        </section>
       )}
       {toggled && matches && (
-        <motion.div
+        <motion.section
           animate={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           className=" fixed flex bg-[#001E6C] bottom-0 left-0 w-full h-screen items-center justify-center"
         >
-          <motion.div
+          <motion.section
             variants={navMotion}
             animate="visible"
             initial="hidden"
@@ -111,14 +113,14 @@ const Nav = () => {
             <motion.a variants={itemMotion} href="">
               Skills
             </motion.a>
-            <motion.a variants={itemMotion} href="">
+            <motion.a variants={itemMotion} href="/contact">
               Contact
             </motion.a>
             <motion.a variants={itemMotion} href="">
               Certifications
             </motion.a>
-          </motion.div>
-        </motion.div>
+          </motion.section>
+        </motion.section>
       )}
     </nav>
   );
