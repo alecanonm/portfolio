@@ -39,7 +39,7 @@ const Nav = () => {
         <section className=" flex ">
           <a
             className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300 "
-            href=""
+            href="#about"
           >
             About
           </a>
