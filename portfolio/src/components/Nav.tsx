@@ -32,6 +32,7 @@ const Nav = () => {
         behavior: "smooth",
       });
     }
+    setToggled(false);
   };
 
   return (
@@ -51,7 +52,7 @@ const Nav = () => {
           <a
             className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300 "
             onClick={scrollToAboutMe}
-            href="#"
+            href="#overview"
           >
             About
           </a>
@@ -116,7 +117,11 @@ const Nav = () => {
             initial="hidden"
             className=" flex flex-col gap-12 text-lg"
           >
-            <motion.a variants={itemMotion} href="#">
+            <motion.a
+              onClick={scrollToAboutMe}
+              variants={itemMotion}
+              href="#overview"
+            >
               About
             </motion.a>
             <motion.a variants={itemMotion} href="">
