@@ -116,7 +116,7 @@ const Nav = () => {
             initial="hidden"
             className=" flex flex-col gap-12 text-lg"
           >
-            <motion.a variants={itemMotion} href="">
+            <motion.a variants={itemMotion} href="#">
               About
             </motion.a>
             <motion.a variants={itemMotion} href="">
