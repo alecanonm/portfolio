@@ -24,16 +24,6 @@ const Nav = () => {
   const [toggled, setToggled] = useState(false);
   const matches = useMediaQuery("(max-width: 900px)");
 
-  useEffect(() => {
-    const hash = window.location.hash;
-    if (hash) {
-      const targetElement = document.querySelector(hash);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, []);
-
   return (
     <nav className=" bg-[#001E6C] text-white  px-20 mb-14 flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
       <figure>
