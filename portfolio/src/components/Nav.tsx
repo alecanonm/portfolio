@@ -24,28 +24,6 @@ const Nav = () => {
   const [toggled, setToggled] = useState(false);
   const matches = useMediaQuery("(max-width: 900px)");
 
-  const scrollToAboutMe = () => {
-    const aboutMeSection = document.getElementById("about");
-    if (aboutMeSection) {
-      window.scrollTo({
-        top: aboutMeSection.offsetTop,
-        behavior: "smooth",
-      });
-    }
-    setToggled(false);
-  };
-
-  const scrollToSkills = () => {
-    const skillsMeSection = document.getElementById("skills");
-    if (skillsMeSection) {
-      window.scrollTo({
-        top: skillsMeSection.offsetTop,
-        behavior: "smooth",
-      });
-    }
-    setToggled(false);
-  };
-
   return (
     <nav className=" bg-[#001E6C] text-white  px-20 mb-14 flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
       <figure>
@@ -62,8 +40,7 @@ const Nav = () => {
         <section className=" flex ">
           <a
             className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300 "
-            onClick={scrollToAboutMe}
-            href="/#overview"
+            href="/#about"
           >
             About
           </a>
@@ -75,8 +52,7 @@ const Nav = () => {
           </a>
           <a
             className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
-            onClick={scrollToSkills}
-            href="/#my-tools"
+            href="/#skills"
           >
             Skills
           </a>
@@ -130,9 +106,11 @@ const Nav = () => {
             className=" flex flex-col gap-12 text-lg"
           >
             <motion.a
-              onClick={scrollToAboutMe}
+              onClick={() => {
+                setToggled((prev) => !prev);
+              }}
               variants={itemMotion}
-              href="/#overview"
+              href="/#about"
             >
               About
             </motion.a>
@@ -140,9 +118,11 @@ const Nav = () => {
               Projects
             </motion.a>
             <motion.a
-              onClick={scrollToSkills}
+              onClick={() => {
+                setToggled((prev) => !prev);
+              }}
               variants={itemMotion}
-              href="/#my-tools"
+              href="/#skills"
             >
               Skills
             </motion.a>
