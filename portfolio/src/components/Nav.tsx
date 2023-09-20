@@ -35,6 +35,17 @@ const Nav = () => {
     setToggled(false);
   };
 
+  const scrollToSkills = () => {
+    const skillsMeSection = document.getElementById("skills");
+    if (skillsMeSection) {
+      window.scrollTo({
+        top: skillsMeSection.offsetTop,
+        behavior: "smooth",
+      });
+    }
+    setToggled(false);
+  };
+
   return (
     <nav className=" bg-[#001E6C] text-white  px-20 mb-14 flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
       <figure>
@@ -52,7 +63,7 @@ const Nav = () => {
           <a
             className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300 "
             onClick={scrollToAboutMe}
-            href="#overview"
+            href="/#overview"
           >
             About
           </a>
@@ -64,7 +75,8 @@ const Nav = () => {
           </a>
           <a
             className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
-            href=""
+            onClick={scrollToSkills}
+            href="/#my-tools"
           >
             Skills
           </a>
@@ -120,14 +132,18 @@ const Nav = () => {
             <motion.a
               onClick={scrollToAboutMe}
               variants={itemMotion}
-              href="#overview"
+              href="/#overview"
             >
               About
             </motion.a>
             <motion.a variants={itemMotion} href="">
               Projects
             </motion.a>
-            <motion.a variants={itemMotion} href="">
+            <motion.a
+              onClick={scrollToSkills}
+              variants={itemMotion}
+              href="/#my-tools"
+            >
               Skills
             </motion.a>
             <motion.a variants={itemMotion} href="/contact">
