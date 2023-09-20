@@ -1,5 +1,6 @@
 ---
 import MysiteLayout from '../layouts/MySiteLayout.astro'
+import Badge from '../components/Badge';
 ---
 
 <MysiteLayout title="AlejandroDev | Full-Satck">
@@ -51,5 +52,24 @@ import MysiteLayout from '../layouts/MySiteLayout.astro'
 	<p class=" text-xl text-gray-600">
 		I'm a passionate Web Developer with one year of experience, specializing in creating attractive and functional web applications. My focus lies in designing intuitive user interfaces and developing efficient servers. I strongly believe in optimizing performance and security. My passion for technology and problem-solving is paired with a constant desire for learning. I'm eager to contribute to innovative projects and make the web a better place. Let's connect and work together to achieve amazing results!
   </p>
+</section>
+<section id="about" class="flex flex-col gap-10 justify-center items-center mx-40 mt-16 max-sm:mx-2 max-2xl:mx-2 ">
+	<h3 class=" text-5xl max-sm:text-4xl font-extrabold text-center">My tools</h3>
+	<section class=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6  place-items-center">
+		<Badge img="/html5.png" name="HTML" />	
+		<Badge img="/css-3.png" name="CSS"/>	
+		<Badge img=/js.png name="JAVASCRIPT"/>	
+		<Badge img="/science.png" name="REACT"/>	
+		<Badge img="/icons8-redux-200.png" name="REDUX" />	
+		<Badge img="/astro.png" name="ASTRO"/>	
+		<Badge img="/tailwind.png" name="TAILWIND"/>	
+		<Badge img="/nextjs.png" name="NEXTJS"/>	
+		<Badge img="/node.png" name="NODEJS"/>	
+		<Badge img="/postgresql.png" name="POSTGRES"/>	
+		<Badge img="/expressjs.png" name="EXPRESS"/>	
+		<Badge img="/firebase.png" name="FIREBASE"/>	
+		<Badge img="/git.png" name="GIT"/>	
+		<Badge img="/sequelize.png" name="SEQUELIZE"/>		
+	</section>
 </section>
 </MysiteLayout>
