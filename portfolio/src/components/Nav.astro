@@ -1,0 +1,144 @@
+---
+---
+
+<nav class=" bg-[#001E6C] text-white  px-20 mb-14 flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
+  <figure>
+    <a href="/">
+      <img
+        class="filter brightness-0 invert"
+        src="/favicon.svg"
+        alt=""
+        width={70}
+      />
+    </a>
+  </figure>
+  <section class="main-menu flex ">
+    <a
+      class=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300 "
+      href="/#about"
+    >
+      About
+    </a>
+    <a
+      class=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
+      href=""
+    >
+      Projects
+    </a>
+    <a
+      class=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
+      href="/#skills"
+    >
+      Skills
+    </a>
+    <a
+      class="hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
+      href="/contact"
+    >
+      Contact
+    </a>
+    <a
+      class="hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
+      href=""
+    >
+      Certifications
+    </a>
+  </section>
+  <section
+  class="menu hidden space-y-1 cursor-pointer z-50"
+>
+  <span
+    class=" block h-1 w-8 rounded bg-white"
+  ></span>
+  <span
+    class=" block h-1 w-6 rounded bg-white"
+  ></span>
+  <span
+    class=" block h-1 w-4 rounded bg-white"
+  ></span>
+</section>
+<section
+id="menuModal"
+class=" hidden fixed flex bg-[#001E6C] bottom-0 left-0 w-full h-screen items-center justify-center" 
+>
+<section
+  class=" flex flex-col gap-12 text-lg"
+>
+  <a
+    class="modal-links"
+    href="/#about"
+  >
+    About
+  </a>
+  <a 
+    class="modal-links"
+    href="">
+    Projects
+  </a>
+  <a
+    class="modal-links"
+    href="/#skills"
+  >
+    Skills
+  </a>
+  <a 
+    class="modal-links"
+   href="/contact">
+    Contact
+  </a>
+  <a  
+    class="modal-links"
+    href="">
+    Certifications
+  </a>
+</section>
+</section>
+</nav>
+
+<style>
+  @media (max-width: 900px) {
+  .menu {
+    display: block;
+  }
+
+  .main-menu {
+    display: none;
+  }
+}
+.menu > span {
+  transition: all .5s;
+  transform-origin: 5px;
+}
+
+.menu.active > span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.menu.active > span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu.active > span:nth-child(3) {
+  transform: rotate(-45deg);
+  width: 100%;
+}
+</style>
+
+<script>
+  const menu = document.querySelector(".menu");
+  const menuModal = document.querySelector("#menuModal");
+  const modalLinks = document.querySelectorAll(".modal-links");
+
+  menu.addEventListener("click", () => {
+  menuModal.classList.toggle("hidden");
+  menu.classList.toggle("active");
+
+    modalLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+    menuModal.classList.add("hidden");
+    menu.classList.remove("active");
+    });
+  });
+});
+
+</script>
