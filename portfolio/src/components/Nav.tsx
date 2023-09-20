@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useMediaQuery } from "../utils/useMediaQuery";
 
 const navMotion = {
@@ -30,7 +30,7 @@ const Nav = () => {
         <a href="/">
           <img
             className="filter brightness-0 invert"
-            src="/favicon.png"
+            src="/favicon.svg"
             alt=""
             width={70}
           />
