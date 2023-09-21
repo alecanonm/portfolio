@@ -129,7 +129,13 @@ const Nav = () => {
             <motion.a variants={itemMotion} href="/contact">
               Contact
             </motion.a>
-            <motion.a variants={itemMotion} href="/#qualifications">
+            <motion.a
+              variants={itemMotion}
+              onClick={() => {
+                setToggled((prev) => !prev);
+              }}
+              href="/#qualifications"
+            >
               Certifications
             </motion.a>
           </motion.section>
