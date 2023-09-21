@@ -1,5 +1,5 @@
-<section class=" w-full">
-  <h3 class="title text-5xl max-sm:text-4xl font-extrabold text-center">Qualifications</h3>
+<section id="qualifications" class=" w-full backdrop-blur-xl bg-[#07262fbe] rounded-xl p-5">
+  <h3 class="title text-4xl max-sm:text-4xl font-bold text-center mb-10 text-white">Qualifications</h3>
 
   <div class="container-slider">
       <div class="slider-container">
@@ -7,15 +7,15 @@
           <input type="radio" name="slider" id="item-2">
           <input type="radio" name="slider" id="item-3">
 
-          <div class="cards w-full  md:h-[400px] sm:h-[300px]  lg:h-[500px]  xl:h-[577px] max-md:w-500px max-md:h-[200px] ">
+          <div class="cards w-full  md:h-[420px] sm:h-[350px]  lg:h-[500px]  xl:h-[577px] max-md:w-500px max-md:h-[200px] ">
               <label class="card" for="item-1" id="selector-1">
                   <img src="/javaScriptUdemy.jpg"  alt="JavaScript">
               </label>
               <label class="card" for="item-2" id="selector-2">
-                  <img src="../../public/alejandroDev.png" alt="Image 2">
+                  <img src="/html-css.png" alt="Image 2">
               </label>
               <label class="card" for="item-3" id="selector-3">
-                  <img src="../../public/alejandroDev.png" alt="Image 3">
+                  <img src="/versiones.png" alt="Image 3">
               </label>
           </div>
       </div>
@@ -23,11 +23,7 @@
 </section>
 
 <style>
-  body {
-      background: #f60642;
-  }
-
-
+ 
   .container-slider {
       margin: 0 auto;
       display: flex;
@@ -62,6 +58,7 @@
       margin: auto;
       cursor: pointer;
       transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      box-shadow: black 0px 10px 30px 2px;
   }
 
   img {

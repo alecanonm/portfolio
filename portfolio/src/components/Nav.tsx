@@ -64,7 +64,7 @@ const Nav = () => {
           </a>
           <a
             className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
-            href=""
+            href="/#qualifications"
           >
             Certifications
           </a>
@@ -129,7 +129,7 @@ const Nav = () => {
             <motion.a variants={itemMotion} href="/contact">
               Contact
             </motion.a>
-            <motion.a variants={itemMotion} href="">
+            <motion.a variants={itemMotion} href="/#qualifications">
               Certifications
             </motion.a>
           </motion.section>
