@@ -25,7 +25,7 @@ const Nav = () => {
   const matches = useMediaQuery("(max-width: 900px)");
 
   return (
-    <nav className=" bg-[#001E6C] text-white  px-20 mb-14 flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
+    <nav className=" bg-[#001E6C] text-white  px-20  flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
       <figure>
         <a href="/">
           <img
