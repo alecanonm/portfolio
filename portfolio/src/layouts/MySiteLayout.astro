@@ -18,10 +18,19 @@ import Nav from "../components/Nav"
 			<header class=" sticky top-0 z-50">
 			<Nav client:visible />
 			</header>
-    <main class="m-5" >
+    <main class="m-5 flex-grow" >
       <slot/>
     </main>
-		<footer></footer>
+		<footer class="sticky bottom-0 z-20 py-2 backdrop-blur-xl bg-[#08072f68] bg-opacity-50 shadow-md">
+			<section class="flex items-center justify-center gap-2">
+				<img src="/copyright.svg" class="filter filter-red" alt="copyright" height="20" width="20">
+				<i class="font-semibold text-lg">AlejandroDev</i>
+				<span class="block">-</span>
+				<a href="https://www.linkedin.com/in/alecanonm/" target="_blank">
+					<img src="/linkedin.svg" alt="linkedin" height="20" width="20">
+				</a>
+			</section>
+		</footer>
 	</body>
 </html>
 
@@ -29,11 +38,17 @@ import Nav from "../components/Nav"
 	body {
 	background-color: #fff;
 	/* opacity: 0.8; */
-	background-image: radial-gradient(#001E6C 0.5px, #fff 0.5px);
+	background-image: radial-gradient(#001f6c79 0.5px, #fff 0.5px);
 	background-size: 10px 10px;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	}
 
 	html{
 		scroll-behavior: smooth;
 	}
+
+
+
 </style>
