@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useMediaQuery } from "../utils/useMediaQuery";
-
 const navMotion = {
   visible: {
     opacity: 10,
@@ -25,7 +24,7 @@ const Nav = () => {
   const matches = useMediaQuery("(max-width: 900px)");
 
   return (
-    <nav className=" bg-[#001E6C] text-white mb-14 max-md:mb-5  px-20  flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
+    <nav className=" dark:bg-[#000000] bg-[#001E6C] text-white mb-14 max-md:mb-5  px-20  flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
       <figure>
         <a href="/">
           <img
@@ -39,31 +38,31 @@ const Nav = () => {
       {!matches && (
         <section className=" flex ">
           <a
-            className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300 "
+            className=" hover:bg-[#43a2fc] dark:hover:bg-slate-400 p-1 px-4 rounded transition-all duration-300 "
             href="/#about"
           >
             About
           </a>
           <a
-            className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
+            className=" hover:bg-[#43a2fc] dark:hover:bg-slate-400 p-1 px-4 rounded transition-all duration-300"
             href=""
           >
             Projects
           </a>
           <a
-            className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
+            className=" hover:bg-[#43a2fc] dark:hover:bg-slate-400 p-1 px-4 rounded transition-all duration-300"
             href="/#skills"
           >
             Skills
           </a>
           <a
-            className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
+            className=" hover:bg-[#43a2fc] dark:hover:bg-slate-400 p-1 px-4 rounded transition-all duration-300"
             href="/contact"
           >
             Contact
           </a>
           <a
-            className=" hover:bg-[#43a2fc] p-1 px-4 rounded transition-all duration-300"
+            className=" hover:bg-[#43a2fc] dark:hover:bg-slate-400 p-1 px-4 rounded transition-all duration-300"
             href="/#qualifications"
           >
             Certifications
@@ -97,7 +96,7 @@ const Nav = () => {
         <motion.section
           animate={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
-          className=" fixed flex bg-[#001E6C] bottom-0 left-0 w-full h-screen items-center justify-center"
+          className=" fixed flex bg-[#001E6C] dark:bg-black bottom-0 left-0 w-full h-screen items-center justify-center"
         >
           <motion.section
             variants={navMotion}
