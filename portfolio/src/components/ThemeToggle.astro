@@ -34,12 +34,12 @@
 	<button
 		type="button"
 		id="toggle-theme"
-		class="group relative h-9 w-9 rounded-md p-2 ring-zinc-400 transition-all hover:ring-2"
+		class="group relative h-9 w-9 rounded-md p-2 transition-all "
 		aria-label="Toggle Dark Mode"
 	>
 		<svg
 			id="sun-svg"
-			class="absolute dark:text-white start-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 scale-0 opacity-0 transition-all group-aria-pressed:scale-100 group-aria-pressed:opacity-100"
+			class="absolute dark:text-white  start-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 scale-0 opacity-0 transition-all group-aria-pressed:scale-100 group-aria-pressed:opacity-100"
 			aria-hidden="true"
 			focusable="false"
 			stroke-width="1.5"
@@ -109,7 +109,7 @@
 		const isDarkMode = document.documentElement.classList.toggle("dark");
 		console.log(isDarkMode);
 		if(isDarkMode) {
-			document.body.style.backgroundImage = "radial-gradient(#001f6c70 0.5px, #252525 0.5px)"
+			document.body.style.backgroundImage = "radial-gradient(#001f6c70 0.5px, #000000 0.5px)"
 		} else {
 			document.body.style.backgroundImage = "radial-gradient(#001f6c79 0.5px, #fff 0.5px)"
 		}
