@@ -45,7 +45,7 @@ const Nav = () => {
           </a>
           <a
             className=" hover:bg-[#43a2fc] dark:hover:bg-slate-400 p-1 px-4 rounded transition-all duration-300"
-            href=""
+            href="/project"
           >
             Projects
           </a>
@@ -113,7 +113,7 @@ const Nav = () => {
             >
               About
             </motion.a>
-            <motion.a variants={itemMotion} href="">
+            <motion.a variants={itemMotion} href="/project">
               Projects
             </motion.a>
             <motion.a
