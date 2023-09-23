@@ -39,6 +39,7 @@ const Nav = () => {
       <picture>
         <a href="/">
           <img
+            loading="lazy"
             className="filter brightness-0 invert"
             src="/favicon.svg"
             alt="my logo"
