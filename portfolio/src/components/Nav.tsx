@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { useMediaQuery } from "../utils/useMediaQuery";
+import { useState, useEffect } from "react";
+
 const navMotion = {
   visible: {
     opacity: 10,
@@ -21,7 +21,18 @@ const itemMotion = {
 
 const Nav = () => {
   const [toggled, setToggled] = useState(false);
-  const matches = useMediaQuery("(max-width: 900px)");
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMatches(window.innerWidth <= 900);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <nav className=" dark:bg-[#000000] bg-[#001E6C] text-white mb-14 max-md:mb-5  px-20  flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
