@@ -36,16 +36,17 @@ const Nav = () => {
 
   return (
     <nav className=" dark:bg-[#000000] bg-[#001E6C] text-white mb-14 max-md:mb-5  px-20  flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
-      <figure>
+      <picture>
         <a href="/">
           <img
             className="filter brightness-0 invert"
             src="/favicon.svg"
-            alt=""
-            width={70}
+            alt="my logo"
+            width="70"
+            height="70"
           />
         </a>
-      </figure>
+      </picture>
       {!matches && (
         <section className=" flex ">
           <a

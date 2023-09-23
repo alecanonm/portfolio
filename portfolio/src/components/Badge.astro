@@ -4,9 +4,9 @@ const {img, name} = Astro.props
 
 <section class="flex  flex-col items-center w-40 pb-5">
   <section class=" bg-[#0f204a] dark:bg-yellow-600 rounded-md p-2">
-    <figure class=" flex items-center w-24 h-24 p-4 rounded-full bg-white dark:bg-[#e5e5e5] hover:scale-105 transition-transform duration-100 ease-in-out">
-      <img src={img} class="rounded-xl" alt={`badge-${name}`} />
-    </figure>
+    <picture class=" flex items-center w-24 h-24 p-4 rounded-full bg-white dark:bg-[#e5e5e5] hover:scale-105 transition-transform duration-100 ease-in-out">
+      <img src={img} class="rounded-xl" width="100px" height="100px" alt={`badge-${name}`} />
+    </picture>
   </section>
   <section class=" relative top-1 bg-black w-24 text-center rounded text-white font-semibold">
     {name}
