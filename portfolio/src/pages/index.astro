@@ -8,7 +8,7 @@ import alejandroDev from "../../public/alejandroDev.png"
 
 <MysiteLayout title="AlejandroDev | Full-Stack" description="I am a dedicated Full-Stack Developer committed to bringing your digital dreams to life on the web. With expertise in design, development, and optimization, I am ready to take your vision online. From custom websites to efficient web applications, my goal is to provide exceptional digital solutions. Trust me to create and optimize your online presence! ">
 
-	<section class="flex justify-center  h-full">
+	<section class="flex justify-center h-screen">
 		<div class="flex flex-col items-center ">
 			<div class="w-2 h-4 rounded-full bg-black dark:bg-white"></div>
 			<div class="w-1 h-5/6 bg-gradient-to-b from-black dark:bg-white"></div>
@@ -37,7 +37,7 @@ import alejandroDev from "../../public/alejandroDev.png"
 			Node.js 
 	 	</p>
 	 	<img src="/node-js.svg" width="30" height="30" alt="nodejs badge">
-	</div>
+		</div>
 		<div class=" flex items-center gap-1">	
 			<p class="text-xl sm:text-2xl font-medium">
 			JavaScript
@@ -50,17 +50,15 @@ import alejandroDev from "../../public/alejandroDev.png"
 	</section>
 	</article>
 </section>
-<div id="about"></div>
-<section  class="flex flex-col gap-8  mx-40 mt-16 max-sm:mx-2 max-2xl:mx-2 ">
+<section id="about" class="flex flex-col gap-8  mx-40 mt-16 max-sm:mx-2 max-2xl:mx-2 ">
 		<h3 class="text-4xl md:text-6xl font-extrabold">Overview.</h3>
 	<p class=" text-xl text-gray-600 dark:text-gray-300">
 		I'm a passionate Web Developer with one year of experience, specializing in creating attractive and functional web applications. My focus lies in designing intuitive user interfaces and developing efficient servers. I strongly believe in optimizing performance and security. My passion for technology and problem-solving is paired with a constant desire for learning. I'm eager to contribute to innovative projects and make the web a better place. Let's connect and work together to achieve amazing results!
   </p>
 </section>
-<div id="skills"></div>
-<section class="flex flex-col gap-10 justify-center items-center mx-40 mt-16 max-sm:mx-2 max-2xl:mx-2 ">
+<section id="skills" class=" flex flex-col gap-10 justify-center items-center mx-40 mt-16 max-sm:mx-2 max-2xl:mx-2 ">
 	<h3 class=" text-5xl max-sm:text-4xl font-extrabold text-center">My tools</h3>
-	<section class=" grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6  place-items-center">
+	<section class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6  place-items-center">
 		<Badge img="/html5.svg" name="HTML" />	
 		<Badge img="/css-3.svg" name="CSS"/>	
 		<Badge img=/js.svg name="JAVASCRIPT"/>	
@@ -76,6 +74,53 @@ import alejandroDev from "../../public/alejandroDev.png"
 		<Badge img="/git.svg" name="GIT"/>	
 		<Badge img="/sequelize.png" name="SEQUELIZE"/>		
 	</section>
+	<article id="contact"  class="flex flex-col justify-center items-center gap-5">
+		<section class=" flex flex-col flex-wrap text-center md:px-50 lg:px-20 gap-6">
+			<h3 class=" text-[1.7rem] sm:text-4xl mt-4 mb-2 font-bold">Elevating Your Brand with Web Design and <b class="text-[#0C40CF] dark:text-yellow-600">SEO</b> </h3>
+			<p class="text-xl text-gray-600 dark:text-gray-300">Transforming ideas into attractive and search <b>engine-optimized</b> web pages. With a  <b>responsive design</b>, your site will look and function flawlessly on desktop computers and mobile devices, attracting more potential customers. </p>
+		</section>
+			<section class="flex flex-col justify-center items-center gap-5">
+				<h2 class="text-[1.7rem] sm:text-3xl mt-4 mb-2 font-bold">You can find me at:</h2>
+				<ul class="flex gap-4 text-xl text-gray-600">
+					<li class="hover:scale-105 transition-transform duration-100 ease-in-out">
+						<picture>
+						<a href="https://www.linkedin.com/in/alecanonm" target="blank">
+							<img width="50" height="50"  src="/linkedin.svg" alt="linkedin"/>
+						</a>
+					</picture>
+					</li>
+					<li class="hover:scale-105 transition-transform duration-100 ease-in-out">
+						<picture>
+						<a href="https://github.com/alecanonm	" target="blank">
+							<img width="50" height="50" class="dark:filter dark:brightness-0 dark:invert"  src="/github.svg" alt="github"/>
+						</a>
+						</picture>
+					</li>
+					<li class="hover:scale-105 transition-transform duration-100 ease-in-out">
+					<picture>
+						<a href="mailto:al3jandrocan0n@gmail.com" target="blank">
+							<img width="55" height="55" src="/gmail.png" alt="gmail"/>
+						</a>
+					</li>
+					</picture>
+					</ul>
+			</section>
+	</article>
 	<Qualifications />
 </section>
 </MysiteLayout>
+
+<style>
+	#contact{
+		scroll-margin-top: 5rem;
+	}
+
+	#skills{
+		scroll-margin-top: 5rem;
+	}
+	
+	#about{
+		scroll-margin-top: 5rem;
+	}
+
+</style>
