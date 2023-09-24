@@ -35,7 +35,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className=" dark:bg-[#000000] bg-[#001E6C] text-white mb-16 max-md:mb-5  px-20  flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
+    <nav className=" dark:bg-[#000000] bg-[#0C40CF] text-white mb-16 max-md:mb-5  px-20  flex justify-between items-center   font-medium max-md:px-5 max-lg:px-32">
       <a href="/#howdy">
         <svg
           xmlns="http://www.w3.org/2000/svg"
