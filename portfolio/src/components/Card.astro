@@ -1,17 +1,19 @@
 ---
+const {title, text, img, github, deploy, s1, s2, s3, s4, s5, s6, s7, s8, s9} = Astro.props
 ---
 <article class=" dark:bg-[#157d47] bg-[#527e8f] project-card rounded-3xl flex flex-col gap-4 max-w-xs relative">
   <figure class="animate-banner [&>.card-banner]:hover:scale-100 [&>.card-banner]:hover:visible">
-    <img src="/e-commerce.jpg" alt="ecommerce" class="rounded-t-3xl min-h-[11.2rem] bg-black/50 text-white">
-    <div class="card-banner absolute top-0 w-full bg-black/70 rounded-t-3xl min-h-[11.2rem] invisible scale-0 transition-transform duration-500"><a href="https://github.com/edgartellom/Mitsumichi" target="_blank" class="absolute top-4 right-4"><img src="/git.svg" alt="Git" width="30" height="30" class="rounded-full bg-white w-10 p-[0.34rem] border-2 border-orange-600/90 hover:bg-orange-300"></a><a href="https://mitsumichi.vercel.app/" target="_blank" class="absolute top-4 left-4"><img src="/deploy.svg" alt="Web" width="30" height="30" class="rounded-full bg-white w-10 p-1 border-2 border-black/90 hover:bg-gray-400"></a></div>
+    <img src={img} alt={title} class="rounded-t-3xl min-h-[11.2rem] bg-black/50 text-white">
+    <div class="card-banner absolute top-0 w-full bg-black/70 rounded-t-3xl min-h-[11.2rem] invisible scale-0 transition-transform duration-500"><a href={github} target="_blank" class="absolute top-4 right-4"><img src="/git.svg" alt="Git" width="30" height="30" class="rounded-full bg-white w-10 p-[0.34rem] border-2 border-orange-600/90 hover:bg-orange-300"></a><a href={deploy} target="_blank" class="absolute top-4 left-4"><img src="/deploy.svg" alt="Web" width="30" height="30" class="rounded-full bg-white w-10 p-1 border-2 border-black/90 hover:bg-gray-400"></a></div>
   </figure>
-  <div class="flex flex-col gap-3 p-4 pt-0 h-full"><h2 class="font-bold text-2xl">Mitsumichi Ecommerce</h2><p class="leading-5 text-sm grow">A web application that allows users to buy motorcycles and leave reviews. It also includes a dashboard where admins can add new motorcycles, ban users, view reviews, and more.</p><div class="flex gap-x-2 flex-wrap text-sm"><span class="inline-block font-semibold" style="color:#022f54">#<!-- -->React</span><span class="inline-block font-semibold" style="color:#309cf5">#<!-- -->Tailwind</span>
-    <span class="inline-block font-semibold" style="color:#022f53">#<!-- -->css</span>
-    <span class="inline-block font-semibold" style="color:#e3dc03">#<!-- -->JavaScript</span>
-    <span class="inline-block font-semibold" style="color:#44f82c">#<!-- -->NodeJs</span>
-    <span class="inline-block font-semibold" style="color:#e14ed5">#<!-- -->Express</span>
-    <span class="inline-block font-semibold" style="color:#e7a33d">#<!-- -->Postgres</span>
-    <span class="inline-block font-semibold" style="color:#dc7ec1">#<!-- -->Sequelize</span>
-    <span class="inline-block font-semibold" style="color:#ebbc3b">#<!-- -->Firebase</span>
+  <div class="flex flex-col gap-3 p-4 pt-0 h-full"><h2 class="font-bold text-2xl">{title}</h2><p class="leading-5 text-sm grow">{text}</p><div class="flex gap-x-2 flex-wrap text-sm">
+    <span class="inline-block font-semibold" style="color:#022f54">{s1 ? s1 : ""}</span><span class="inline-block font-semibold" style="color:#309cf5">{s2 ? s2 : ""}</span>
+    <span class="inline-block font-semibold" style="color:#022f53">{s3 ? s3 : ""}</span>
+    <span class="inline-block font-semibold" style="color:#e3dc03">{s4 ? s4 : ""}</span>
+    <span class="inline-block font-semibold" style="color:#44f82c">{s5 ? s5 : ""}</span>
+    <span class="inline-block font-semibold" style="color:#e14ed5">{s6 ? s6 : ""}</span>
+    <span class="inline-block font-semibold" style="color:#e7a33d">{s7 ? s7 : ""}</span>
+    <span class="inline-block font-semibold" style="color:#dc7ec1">{s8 ? s8 : ""}</span>
+    <span class="inline-block font-semibold" style="color:#ebbc3b">{s9 ? s9 : ""}</span>
   </div>
 </article>
