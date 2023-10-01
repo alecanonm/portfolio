@@ -1,5 +1,6 @@
 ---
  import MySiteLayout from "../layouts/MySiteLayout.astro";
+ import Card from "../components/Card.astro";
 ---
 
 <MySiteLayout title="AlejandroDev | projects" description="Welcome to my Work Gallery | AlejandroDev. Explore a curated collection of my professional achievements in web development. This portfolio showcases my extensive experience, offering a comprehensive display of real-world projects. Each project is meticulously detailed with direct access to code repositories and live demonstrations. These examples highlight my expertise in solving complex challenges, navigating diverse technological landscapes, and showcasing proficient project management skills.">
@@ -11,4 +12,7 @@
       </p>
     </section>
   </article>
+  <section class="grid place-content-center pt-2">
+    <Card/>
+  </section>
 </MySiteLayout>
