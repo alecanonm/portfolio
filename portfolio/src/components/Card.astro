@@ -1,7 +1,7 @@
 ---
 const {title, text, img, github, deploy, s1, s2, s3, s4, s5, s6, s7, s8, s9} = Astro.props
 ---
-<article class=" dark:bg-[#157d47] bg-[#527e8f] project-card rounded-3xl flex flex-col gap-4 max-w-xs relative">
+<article class=" bg-[#527e8f] project-card rounded-3xl flex flex-col gap-4 max-w-xs relative">
   <figure class="animate-banner [&>.card-banner]:hover:scale-100 [&>.card-banner]:hover:visible">
     <img src={img} alt={title} class="rounded-t-3xl min-h-[11.2rem] bg-black/50 text-white">
     <div class="card-banner absolute top-0 w-full bg-black/70 rounded-t-3xl min-h-[11.2rem] invisible scale-0 transition-transform duration-500"><a href={github} target="_blank" class="absolute top-4 right-4"><img src="/git.svg" alt="Git" width="30" height="30" class="rounded-full bg-white w-10 p-[0.34rem] border-2 border-orange-600/90 hover:bg-orange-300"></a><a href={deploy} target="_blank" class="absolute top-4 left-4"><img src="/deploy.svg" alt="Web" width="30" height="30" class="rounded-full bg-white w-10 p-1 border-2 border-black/90 hover:bg-gray-400"></a></div>
