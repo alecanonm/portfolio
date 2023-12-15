@@ -1,6 +1,6 @@
 ---
 const {title, description} = Astro.props
-import Nav from "../components/Nav"
+import NavBar from "../components/NavBar.astro"
 import ThemeToggle from "../components/ThemeToggle.astro"
 ---
 
@@ -18,38 +18,43 @@ import ThemeToggle from "../components/ThemeToggle.astro"
 
 	</head>
 	<body class="light">
-		
-			<header class=" sticky top-0 z-50 ">
-			<Nav client:load />
+			<header class="dark:text-white text-black font-medium container mx-auto px-6 py-5  z-50 ">
+				<NavBar client:load />
 			</header>
-    <main class="m-5 flex-grow dark:text-white" >
-			<a type="button" href="/resume.pdf" download="CV-Alejandro" class=" fixed z-20 hover:scale-105  right-1 bottom-[3.5rem] font-semibold rounded-xl text-white dark:text-gray-200 bg-[#0C40CF] dark:bg-yellow-600 px-6 py-2">Download CV</a>
+    <main class="m-5 flex-grow dark:text-white container mx-auto px-6 " >
+			<div class="fixed flex right-4 bottom-16 bg-transparent  z-10 "><ThemeToggle /></div>
       <slot/>
     </main>
-		<footer class="sticky bottom-0 z-20 py-2 backdrop-blur-xl bg-[#08072f68] bg-opacity-50 shadow-md">
+		<footer class="sticky text-slate-600 bottom-0 z-20 py-2 dark:bg-[rgb(18,18,18)]  bg-white ">
 			<section class="flex items-center justify-center gap-2">
-				<img src="/copyright.svg" class="filter filter-red" alt="copyright" height="20" width="20">
-				<em class="font-semibold text-lg dark:text-white">AlejandroDev</em>
-				<span class="block">-</span>
+				<span class="text-lg dark:text-slate-300 "><em><strong>©</strong></em></span>
+				<em class="text-lg dark:text-slate-300"><strong>AlejandroDev</strong></em>
+				<span class="block dark:text-slate-300">-</span>
 				<a href="https://www.linkedin.com/in/alecanonm/" target="_blank">
 					<img src="/linkedin.svg" alt="linkedin" height="20" width="20">
 				</a>
-				<ThemeToggle />
 			</section>
 		</footer>
 	</body>
 </html>
-
 <style>
+
+@font-face {
+	font-family: 'Roboto';
+	src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+}
 	.light {
-	;
-	background-size: 10px 10px;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 	}
 
+	main{
+		font-family: 'Roboto';
+	}
+
 	html{
+
 		scroll-behavior: smooth;
 		scroll-margin-top: 0
 	}

@@ -1,0 +1,75 @@
+---
+import MySiteLayout from "../layouts/MySiteLayout.astro"; 
+import Badge from "../components/Badge.astro";
+---
+
+<MySiteLayout title="AlejandroDev | About" description="AlejandroDev | About me. Discover the portfolio of Alejandro, a seasoned web developer with a rich history of successful projects. This curated showcase presents a comprehensive overview of my professional journey, featuring in-depth insights into real-world web development ventures. Explore each project with direct links to code repositories and live demos, offering transparency into my problem-solving prowess. Navigate through a diverse technological landscape and witness my adept project management skills in action. Join me in the realm of web development excellence.">
+  <section class="flex flex-col justify-center items-center container mx-auto gap-5">
+    <article class="flex flex-col justify-center items-center md:grid md:grid-cols-2 gap-6 pb-7">
+      <figure>
+        <img src="/public/profile.png" alt="AlejandroDev" width="350" height="350"  class="rounded-md" />
+      </figure>
+      <section class="flex flex-col justify-center items-center gap-5 sm:max-w-md">
+        <div class="flex flex-col justify-center items-center gap-5">
+        <h1 class="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center text-slate-800 dark:text-white"><strong>Alejandro Canon</strong></h1>
+        <h2 class="text-justify text-xl text-gray-500 dark:text-gray-300 font-medium">
+          welcome to my portfolio!
+        </h2>
+      </div>
+      <p>I am an experience full-stack developer focused on frontend currently studying UI/UX at Google.</p>
+      <blockquote  cite="https://konmari.com/about-marie-kondo/">
+        <q>After order comes happiness</q>
+      </blockquote>
+      <a type="button" href="/resume.pdf" download="CV-Alejandro" class=" font-semibold  text-black border-b-2 border-red-600 dark:text-gray-200 dark:border-green-600 px-6 py-2">Download CV</a>
+      <picture class="self-center pt-8">
+        <ul class="flex gap-4 text-xl text-gray-600">
+        <li>
+          <a href="https://www.linkedin.com/in/alecanonm" target="blank">
+            <img width="30" height="30"  src="/linkedin.svg" alt="linkedin"/>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/alecanonm	" target="blank">
+            <img width=30" height="30" class="dark:filter dark:brightness-0 dark:invert"  src="/github.svg" alt="github"/>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:al3jandrocan0n@gmail.com" target="blank">
+            <img width="35" height="35" src="/gmail.png" alt="gmail"/>
+          </a>
+        </li>
+        </ul>
+    </picture>
+      </section>
+    </article>
+    <hr class="border-t-1 w-full py-2 sm:w-3/4">
+    <section class="flex flex-col gap-5">
+      <h3 class="text-3xl text-center text-slate-800 dark:text-white"><strong class="font-medium">Qualifications</strong></h3>
+      <p class="text-center text-gray-700 dark:text-gray-300 pb-4">I am a self-taught developer with a passion for learning and a strong work ethic. I am a quick learner and I am always looking for new challenges.</p>
+      <picture class="flex flex-wrap gap-5 justify-center items-center">
+        <figure><img src="/public/henry.png" alt="Bootcamp certification" class="w-72 h-56"></figure>
+        <figure><img src="/public/html-css.png" alt="html-css certification" class="w-full h-56"></figure>
+        <figure><img src="/public/javaScriptUdemy.jpg" alt="javaScript certification" class="w-full h-56"></figure>
+      </picture>
+      </section>
+      <hr class="border-t-1 w-full py-2 sm:w-3/4">
+      <section class="flex flex-col gap-10">
+        <h3 class="text-3xl text-center text-slate-800 dark:text-white"><strong class="font-medium">I work with the following tools</strong></h3>
+      <section class="flex flex-wrap justify-center items-center">
+        <Badge img="/html5.svg" name="HTML" />	
+        <Badge img="/css-3.svg" name="CSS"/>	
+        <Badge img=/js.svg name="JAVASCRIPT"/>	
+        <Badge img="/science.svg" name="REACT"/>	
+        <Badge img="/icons8-redux-200.svg" name="REDUX" />	
+        <Badge img="/astro.svg" name="ASTRO"/>	
+        <Badge img="/tailwind.svg" name="TAILWIND"/>	
+        <Badge img="/nextjs.svg" name="NEXTJS"/>	
+        <Badge img="/node.svg" name="NODEJS"/>	
+        <Badge img="/postgresql.svg" name="POSTGRES"/>	
+        <Badge img="/expressjs.svg" name="EXPRESS"/>	
+        <Badge img="/firebase.svg" name="FIREBASE"/>	
+        <Badge img="/git.svg" name="GIT"/>	
+        <Badge img="/sequelize.png" name="SEQUELIZE"/>		
+      </section>
+  </section>
+</MySiteLayout>
