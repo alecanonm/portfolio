@@ -1,21 +1,11 @@
 ---
-const {title, text, img, github, deploy, s1, s2, s3, s4, s5, s6, s7, s8, s9} = Astro.props
+const {title, img, link} = Astro.props
 ---
 <article>
-  <figure class="group relative w-80 h-48 sm:h-[200px] sm:w-[400px] overflow-hidden transition-all duration-300 ease-out cursor-pointer animate-banner [&>.card-banner]:hover:scale-100 [&>.card-banner]:hover:visible">
+ <a href={link}> <figure class="group relative w-80 h-48 sm:h-[200px] sm:w-[400px] overflow-hidden transition-all duration-300 ease-out cursor-pointer animate-banner [&>.card-banner]:hover:scale-100 [&>.card-banner]:hover:visible">
     <img src={img} alt={title} class="w-full h-full">
     <div class="card-banner absolute top-0 w-full h-full bg-[#4ea53fc5] min-h-[11.2rem] invisible scale-0 transition-transform duration-500 text-white flex justify-center items-center">
       <h2 class="text-4xl font-medium w-80 text-center">{title}</h2>
     </div>
-  </figure>
-  <!-- <div class="flex flex-col gap-3 p-4 pt-0 h-full"><h2 class="font-bold text-2xl">{title}</h2><p class="leading-5 text-sm grow">{text}</p><div class="flex gap-x-2 flex-wrap text-sm">
-    <span class="inline-block font-semibold" style="color:#022f54">{s1 ? s1 : ""}</span><span class="inline-block font-semibold" style="color:#309cf5">{s2 ? s2 : ""}</span>
-    <span class="inline-block font-semibold" style="color:#022f53">{s3 ? s3 : ""}</span>
-    <span class="inline-block font-semibold" style="color:#e3dc03">{s4 ? s4 : ""}</span>
-    <span class="inline-block font-semibold" style="color:#44f82c">{s5 ? s5 : ""}</span>
-    <span class="inline-block font-semibold" style="color:#e14ed5">{s6 ? s6 : ""}</span>
-    <span class="inline-block font-semibold" style="color:#e7a33d">{s7 ? s7 : ""}</span>
-    <span class="inline-block font-semibold" style="color:#dc7ec1">{s8 ? s8 : ""}</span>
-    <span class="inline-block font-semibold" style="color:#ebbc3b">{s9 ? s9 : ""}</span>
-  </div> -->
+  </figure></a>
 </article>
