@@ -2,9 +2,9 @@
 const {title, img, link} = Astro.props
 ---
 <article>
- <a href={link}> <figure class="group relative w-80 h-48 sm:h-[200px] sm:w-[400px] overflow-hidden transition-all duration-300 ease-out cursor-pointer animate-banner [&>.card-banner]:hover:scale-100 [&>.card-banner]:hover:visible">
+  <figure class="group relative w-80 h-48 sm:h-[200px] sm:w-[400px] overflow-hidden transition-all duration-300 ease-out cursor-pointer animate-banner [&>.card-banner]:hover:scale-100 [&>.card-banner]:hover:visible">
     <img src={img} alt={title} class="w-full h-full">
-    <div class="card-banner absolute top-0 w-full h-full bg-[#4ea53fc5] min-h-[11.2rem] invisible scale-0 transition-transform duration-500 text-white flex justify-center items-center">
+    <a href={link}><div class="card-banner absolute top-0 w-full h-full bg-[#4ea53fc5] min-h-[11.2rem] invisible scale-0 transition-transform duration-500 text-white flex justify-center items-center">
       <h2 class="text-4xl font-medium w-80 text-center">{title}</h2>
     </div>
   </figure></a>
