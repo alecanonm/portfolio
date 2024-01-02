@@ -3,7 +3,26 @@ import MySiteLayout from "../layouts/MySiteLayout.astro";
 ---
 
 <MySiteLayout title="AlejandroDev | About" description="AlejandroDev | About me. Discover the portfolio of Alejandro, a seasoned web developer with a rich history of successful projects. This curated showcase presents a comprehensive overview of my professional journey, featuring in-depth insights into real-world web development ventures. Explore each project with direct links to code repositories and live demos, offering transparency into my problem-solving prowess. Navigate through a diverse technological landscape and witness my adept project management skills in action. Join me in the realm of web development excellence.">
-  <section>
-    HOLA  
+  <section class="flex flex-col items-center justify-center gap-6 container mx-auto">
+    <h1 class="text-3xl sm:text-5xl text-center dark:text-slate-200"><strong>Guess my number</strong></h1> 
+    <figure>
+      <img src="/guess.png" alt="guess my number" width="1000">
+    </figure>
+    <p class="text-xl px-2">Guess my number its just a simple game built using vanilla JavaScrip, CSS and HTML, with this challenge i had culd put in practice the basics skills about programming logic, using the DOM and frontend abilyties</p>
+    <h2 class="text-2xl sm:text-3xl  dark:text-slate-200"><b>Rules</b></h2>
+    <p class="text-xl px-2">The game is simple, you have to guess a number between 1 and 20, if you guess the number you win, if not you lose, you have 20 points, every time you miss a number you lose 1 point, if you lose all your points you lose the game, if you win you can play again</p>
+    <figure>
+      <img src="/guessWinn.jpg" alt="guess my number" width="1000" height="1000">
+    </figure>
+      <ul class="flex justify-around items-center w-full">
+        <li class="flex justify-center items-center flex-col">
+          <span>Repository</span>
+           <a href="https://github.com/alecanonm/Guess-my-number"><img src="/git.svg" alt="git" class="w-12 h-12 sm:w-32 sm:h-32"></a>
+        </li>
+        <li class="flex justify-center items-center flex-col">
+          <span>Deploy</span>
+          <a href="https://guess-my-number-gray.vercel.app/"><img src="/deploy.svg" alt="git" class="w-12 h-12 sm:w-32 sm:h-32"></a>
+       </li>
+      </ul>
   </section>
 </MySiteLayout>
