@@ -3,38 +3,38 @@ import MySiteLayout from "../layouts/MySiteLayout.astro";
 ---
 
 <MySiteLayout title="AlejandroDev | About" description="AlejandroDev | About me. Discover the portfolio of Alejandro, a seasoned web developer with a rich history of successful projects. This curated showcase presents a comprehensive overview of my professional journey, featuring in-depth insights into real-world web development ventures. Explore each project with direct links to code repositories and live demos, offering transparency into my problem-solving prowess. Navigate through a diverse technological landscape and witness my adept project management skills in action. Join me in the realm of web development excellence.">
-  <section class="flex flex-col justify-center items-center container mx-auto gap-5">
+  <section class="flex flex-grow justify-center items-center container mx-auto gap-5">
     <article class="flex flex-col justify-center items-center md:grid md:grid-cols-2 gap-6 pb-7">
       <figure>
-        <img src="/profile.png" alt="AlejandroDev" width="350" height="350"  class="rounded-md" />
+        <img src="/profile.png" alt="AlejandroDev" width="300" height="300"  class="rounded-md" />
       </figure>
       <section class="flex flex-col justify-center items-center gap-5 sm:max-w-md">
         <div class="flex flex-col justify-center items-center gap-5">
         <h1 class="text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-center text-slate-800 dark:text-white"><strong>Alejandro Canon</strong></h1>
         <h2 class="text-justify text-xl text-gray-500 dark:text-gray-300 font-medium">
-          welcome to my portfolio!
+          Full-Stack Developer | Frontend
         </h2>
       </div>
-      <p>I am an experience full-stack developer focused on frontend currently studying UI/UX at Google.</p>
+      <p class="text-xl justify-center text-center">I am an experience full-stack developer focused on frontend.</p>
       <blockquote  cite="https://konmari.com/about-marie-kondo/">
-        <q>After order comes happiness</q>
+        <q class="text-lg text-[#45c962]"><i>After order comes happiness</i></q>
       </blockquote>
-      <a type="button" href="/resume.pdf" download="CV-Alejandro" class=" font-semibold  text-black border-b-2 border-red-600 dark:text-gray-200 dark:border-green-600 px-6 py-2">Download CV</a>
+      <a type="button" href="/resume.pdf" download="CV-Alejandro" class=" font-semibold text-xl text-black border-b-2 border-slate-500 dark:text-gray-200 dark:border-green-600 px-6 py-2">Download CV</a>
       <picture class="self-center pt-8">
         <ul class="flex gap-4 text-xl text-gray-600">
         <li>
           <a href="https://www.linkedin.com/in/alecanonm" target="blank">
-            <img width="30" height="30"  src="/linkedin.svg" alt="linkedin"/>
+            <img width="30" height="30" class="md:h-12 md:w-12"  src="/linkedin.svg" alt="linkedin"/>
           </a>
         </li>
         <li>
           <a href="https://github.com/alecanonm	" target="blank">
-            <img width=30" height="30" class="dark:filter dark:brightness-0 dark:invert"  src="/github.svg" alt="github"/>
+            <img width=30" height="30" class="dark:filter dark:brightness-0 dark:invert md:h-12 md:w-12"  src="/github.svg" alt="github"/>
           </a>
         </li>
         <li>
           <a href="mailto:al3jandrocan0n@gmail.com" target="blank">
-            <img width="35" height="35" src="/gmail.png" alt="gmail"/>
+            <img width="30" height="35" src="/gmail.png" class="md:h-12 md:w-12 border-2 dark:border-white border-black p-1 rounded-lg" alt="gmail"/>
           </a>
         </li>
         </ul>

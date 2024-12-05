@@ -1,7 +1,6 @@
 ---
 const {title, description} = Astro.props
 import NavBar from "../components/NavBar.astro"
-import ThemeToggle from "../components/ThemeToggle.astro"
 ---
 
 
@@ -18,14 +17,13 @@ import ThemeToggle from "../components/ThemeToggle.astro"
 
 	</head>
 	<body class="light">
-			<header class="dark:text-white text-black font-medium container mx-auto px-6 py-5  z-50 ">
+			<header class="sticky z-50 top-0">
 				<NavBar/>
 			</header>
-    <main class="m-5 flex-grow dark:text-white container mx-auto px-6 " >
-			<div class="fixed flex right-4 bottom-16 bg-transparent  z-10 "><ThemeToggle /></div>
+    <main class="m-5 flex-grow dark:text-white  px-6" >
       <slot/>
     </main>
-		<footer class="sticky text-slate-600 bottom-0 z-20 py-2 dark:bg-[rgb(18,18,18)]  bg-white ">
+		<footer class="sticky text-slate-600 bottom-0 z-20 py-2 bg-transparent backdrop-blur-xl">
 			<section class="flex items-center justify-center gap-2">
 				<span class="text-lg dark:text-slate-300 "><em><strong>©</strong></em></span>
 				<em class="text-lg dark:text-slate-300"><strong>AlejandroDev</strong></em>
